@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: hsl(47, 88%, 63%);
+    font-family: 'Figtree', sans-serif;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.mainContainer{
+    background-color: hsl(0, 0%, 100%);
+    width: 25%;
+    border: 1px black solid;
+    border-radius:16px;
+    padding: 0%;
+    margin: 32px auto;
+    box-shadow: 10px 10px;
+}
+
+
+.placeholder_img{
+    padding: 1rem;
+    /* border: 1px white solid; */
+    border-radius: 32px;
+    margin: 0px;
+}
+
+p{
+    font-weight: 600;
+}
+
+.genre{
+    background-color: hsl(47, 88%, 63%);
+    margin: 0 6%;
+    padding: 6px 8px;
+    width:min-content;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.genre:hover{
+    background-color: hsl(47, 100%, 57%);
+}
+
+.date{
+    font-size:x-small; 
+    margin: 8px 6% 16px;
+}
+
+h1{
+    color: hsl(47, 88%, 63%); 
+    font-size: large;
+    margin: 0 6%;
+}
+
+h1:hover{
+    color: hsl(47, 100%, 57%);
+}
+
+.description{
+    color: gray;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 8px 6% 16px;
+}
+
+.author{
+    margin: 0px 6% 16px;
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+    font-size: x-small;
+}
+
+.author span:hover{
+    animation: pop_text 120ms;
+    font-size: 14px;
+}
+
+.author img{
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
+}
+
+.author img:hover{
+    animation: pop_img 100ms;
+    width: 35px;
+    height: 35px;
+}
+
+@keyframes pop_img {
+    0% {width: 24px;
+        height: 24px;}
+    
+    50% {width: 30px;
+        height: 30px;}
+
+    100% {width: 35px;
+        height: 35px;}
+}
+
+@keyframes pop_text {
+    0% {
+        font-size: x-small;
+    }
+    50% {
+        font-size: 12px;
+    }
+    100% {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .mainContainer{
+        width: 65%;
+    }
+
+    .genre{
+        padding: 4px 6px;
+        font-size: 10px;
+        font-weight: 800;
+    }
+
+    h1{
+        color: black;
+        font-size: medium;
+    }
+    h1:hover{
+        color: black;
+    }
+
+    .description{
+        font-size: 10px;
+    }
+}
